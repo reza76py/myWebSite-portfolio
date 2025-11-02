@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: portfolio_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3110:80"          # host:container → safe range (no clash with Traefik)
+    restart: unless-stopped
+
