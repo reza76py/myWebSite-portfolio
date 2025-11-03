@@ -7,6 +7,6 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3110:80"          # host:container → safe range (no clash with Traefik)
+      - "3110:9000"          # host:container → safe range (no clash with Traefik)
     restart: unless-stopped
 
